@@ -5,6 +5,7 @@ pipeline{
         stage("Cloning code") {
             steps {
                println "Git clone URL"
+               sh "ls -l"
             }
         }
         stage("Build Code") {
