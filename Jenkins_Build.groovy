@@ -4,12 +4,12 @@ pipeline{
     stages{
         stage("Cloning code") {
             steps {
-                Git clone URL
+               println "Git clone URL"
             }
         }
         stage("Build Code") {
             steps {
-                mvn clean package
+               println "mvn clean package"
             }
         }
         stage("Uploading build files to S3 bucket") {
