@@ -20,7 +20,7 @@ pipeline{
             steps {
                 println "upload files to S3"
                 sh "echo $BUILD_NUMBER"
-                sh "aws s3 cp targe${BUILD_NUMBER}.war s3://mydeployedprojects/"
+                sh "aws s3 cp target/hello-${BUILD_NUMBER}.war s3://mydeployedprojects/"
             }
         }
     }
