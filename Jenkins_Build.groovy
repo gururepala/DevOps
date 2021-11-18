@@ -12,7 +12,7 @@ pipeline{
             steps {
                println "mvn clean package"
                sh "mvn clean package"
-               sh "ls -l /target/"
+               sh "ls -l target/"
             }
         }
         stage("Uploading build files to S3 bucket") {
