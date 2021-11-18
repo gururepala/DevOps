@@ -19,6 +19,8 @@ pipeline{
         stage("Uploading build files to S3 bucket") {
             steps {
                 println "upload files to S3"
+                sh "echo $BUILD_NUMBER"
+                sh "aws s3 cp targe$BUILD_NUMBER.war s3://mydeployedprojects/"
             }
         }
     }
