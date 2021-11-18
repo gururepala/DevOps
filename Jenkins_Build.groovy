@@ -5,6 +5,7 @@ pipeline{
         stage("Cloning code") {
             steps {
                println "Git clone URL"
+               checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'jenkins-user-github', url: 'https://github.com/gururepala/boxfuse-sample-java-war-hello.git']]])
                sh "ls -l"
             }
         }
